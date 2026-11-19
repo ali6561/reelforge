@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReelForge login</title><link rel="stylesheet" href="style.css"></head><body>
+<h1>Almost done</h1>
+<p>Copy this whole link and paste it into ReelForge (Publish → TikTok → "paste the redirected URL" → Use code):</p>
+<p><code id="u"></code></p>
+<p><button id="b">Copy link</button> <span id="ok"></span></p>
+<script>
+const u = location.href;
+document.getElementById("u").textContent = u;
+document.getElementById("b").onclick = () => navigator.clipboard.writeText(u).then(() => document.getElementById("ok").textContent = "Copied ✓");
+</script>
+</body></html>
